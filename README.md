@@ -1,15 +1,38 @@
-# SigmaOS-renamer-bulk
+    # SigmaOS-renamer-bulk
 
-Part of the SigmaOS multi-repository architecture.
+    Bulk regex renamer with live preview
 
-## Principles
-- MODULARITY: Single responsibility per repository
-- LOOSE COUPLING: Minimal dependencies between repos
-- INTERFACE SEGREGATION: Clear, focused public APIs
-- DETERMINISTIC TESTING: Comprehensive test coverage
+    Part of the **SigmaOS** sovereign operating-system ecosystem — a multi-repository
+    distribution modelled on Linux Mint and Omarchy Linux. See the parent
+    [`SigmaOS`](https://github.com/AaryanSinghChauhan09/SigmaOS) repository for the
+    full component index.
 
-## License
-SPDX-License-Identifier: GPL-3.0-or-later
+    ## Upstream inspirations
+    - https://github.com/linuxmint/bulky
 
-## Copyright
-Copyright (C) 2026 SigmaOS Project
+    ## Design principles applied
+    - **Fail-Fast**
+- **Defensive Programming**
+- **Least Astonishment**
+- **KISS**
+- **DRY**
+- **Deterministic Testing**
+
+    ## Usage
+    Verbs: `preview, apply`
+
+    ```
+    $ sigma-renamer preview /dir --pattern '^img_' --replace 'photo-'
+img_001.jpg -> photo-001.jpg
+$ sigma-renamer apply  /dir --pattern '\.jpe?g$' --replace '.jpg'
+
+    ```
+
+    ## Build & test
+    ```
+    make build
+    make test
+    ```
+
+    ## Licence
+    GNU General Public License v3.0 (FOSS).
