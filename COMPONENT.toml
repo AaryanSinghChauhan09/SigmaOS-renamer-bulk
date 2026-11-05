@@ -1,0 +1,6 @@
+[component]
+name = "SigmaOS-renamer-bulk"
+tier = 4
+description = "Bulk filename batch renaming tool and regular expression pattern replacer inspired by Bulky"
+contracts = ['bulk-renamer', 'regex-renamer', 'batch-file-editor']
+upstream_inspirations = ['https://github.com/linuxmint/bulky']
